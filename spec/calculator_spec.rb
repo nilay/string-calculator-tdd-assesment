@@ -29,4 +29,13 @@ RSpec.describe 'Calculator' do
     expect(add("1\n2,3")).to eq(6)
   end
 
+  # ==== 3rd set =====
+  it 'supports custom delimeter' do
+    expect(add("//;\n1;2")).to eq(3)
+  end
+
+  it 'do not allow negative number' do
+    expect { add('1,-2,3') }.to raise_error(InvalidNumberError)
+  end
+
 end
