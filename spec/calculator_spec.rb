@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require_relative '../calculator.rb'
 RSpec.describe 'Calculator' do
   it 'has method add' do
     expect('method').to eq(defined? add)
